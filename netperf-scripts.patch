@@ -75,7 +75,7 @@
  #NETHOME=/usr/local/netperf
  #NETHOME="/opt/netperf"
 -NETHOME="."
-+NETHOME="/usr/bin/netperf"
++NETHOME="/usr/bin"
  
  # at what port will netserver be waiting? If you decide to run
  # netserver at a differnet port than the default of 12865, then set
@@ -86,7 +86,7 @@
  #NETHOME=/usr/local/netperf
  #NETHOME="/opt/netperf"
 -NETHOME="."
-+NETHOME="/usr/bin/netperf"
++NETHOME="/usr/bin"
  
  # at what port will netserver be waiting? If you decide to run
  # netserver at a differnet port than the default of 12865, then set
