@@ -1,5 +1,5 @@
 --- netperf-2.3.orig/makefile	2004-06-26 00:09:50.000000000 +0200
-+++ netperf-2.3/makefile	2004-10-18 04:06:57.000000000 +0200
++++ netperf-2.3/makefile	2004-10-19 10:20:37.153146536 +0200
 @@ -16,7 +16,7 @@
  # in /usr/local/netperf or /opt/netperf
  #
@@ -9,13 +9,11 @@
  
  # The compiler on your system might be somewhere else, and/or have
  # a different name.
-@@ -110,8 +110,8 @@
- #                   and the row retains the TENTH_MSEC lable instead of
+@@ -111,7 +111,7 @@
  #                   the new HUNDRED_USEC
  
--LOG_FILE=DEBUG_LOG_FILE="\"/tmp/netperf.debug\""
+ LOG_FILE=DEBUG_LOG_FILE="\"/tmp/netperf.debug\""
 -CFLAGS = -O -D$(LOG_FILE) -DNEED_MAKEFILE_EDIT
-+LOG_FILE=DEBUG_LOG_FILE="\"$(HOME)/netperf.debug\""
 +CFLAGS = -O -D$(LOG_FILE)
  
  # Some platforms, and some options, require additional libraries.
