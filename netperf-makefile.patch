@@ -1,0 +1,11 @@
+--- netperf-2.3/makefile.orig	2004-07-15 08:26:22.149542880 +0200
++++ netperf-2.3/makefile	2004-07-15 08:27:19.438833584 +0200
+@@ -111,7 +111,7 @@
+ #                   the new HUNDRED_USEC
+ 
+ LOG_FILE=DEBUG_LOG_FILE="\"/tmp/netperf.debug\""
+-CFLAGS = -O -D$(LOG_FILE) -DNEED_MAKEFILE_EDIT
++CFLAGS = -O -D$(LOG_FILE)
+ 
+ # Some platforms, and some options, require additional libraries.
+ # you can add to the "LIBS =" line to accomplish this. if you find
