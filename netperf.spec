@@ -6,7 +6,7 @@ Summary(pl):	Narzêdzie do testowania wydajno¶ci dla TCP/UDP
 Summary(pt_BR):	Ferramenta para testes de performance de rede TCP/UDP
 Name:		netperf
 Version:	2.3
-Release:	1.1
+Release:	2
 License:	Freely Distributable
 Group:		Networking
 #Source0:	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/%{name}-%{version}.tar.gz
