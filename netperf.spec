@@ -35,10 +35,12 @@ Ferramenta para medir a velocidade de transferências TCP/UDP.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install netperf $RPM_BUILD_ROOT%{_bindir}
-install netserver $RPM_BUILD_ROOT%{_bindir}
+install netperf		$RPM_BUILD_ROOT%{_bindir}
+install netserver	$RPM_BUILD_ROOT%{_bindir}
+install netperf.man	$RPM_BUILD_ROOT%{_mandir}/man1/netperf.1
+install netserver.man	$RPM_BUILD_ROOT%{_mandir}/man1/netserver.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -48,3 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ACKNWLDGMNTS COPYRIGHT README Release_Notes
 %attr(755,root,root) %{_bindir}/netperf
 %attr(755,root,root) %{_bindir}/netserver
+%{_mandir}/man?/*
