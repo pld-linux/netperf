@@ -1,6 +1,7 @@
 Summary:	Performance testing tool for TCP/UDP
-Summary(pt_BR): Ferramenta para testes de performance de rede TCP/UDP
-Summary(es):	Mide la Velocidad de la Conecion entre dos maquinas.
+Summary(es):	Mide la Velocidad de la Conecion entre dos maquinas
+Summary(pl):	Narzêdzie do testowania wydajno¶ci dla TCP/UDP
+Summary(pt_BR):	Ferramenta para testes de performance de rede TCP/UDP
 Name:		netperf
 Version:	2.3
 Release:	0.1
@@ -14,13 +15,16 @@ URL:		http://www.netperf.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Netperf is a tool for measure TCP/UDP speeds
-
-%description -l pt_BR
-Ferramenta para medir a velocidade de transferências TCP/UDP
+Netperf is a tool for measure TCP/UDP speeds.
 
 %description -l es
 El netperf mide la velocidad en que la tarjeta de red responde.
+
+%description -l pl
+Netperf to narzêdzie do mierzenia szybko¶ci TCP/UDP.
+
+%description -l pt_BR
+Ferramenta para medir a velocidade de transferências TCP/UDP.
 
 %prep
 %setup -q
