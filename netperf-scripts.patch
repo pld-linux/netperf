@@ -1,0 +1,92 @@
+--- netperf-2.3/arr_script.orig	2004-06-26 00:09:50.000000000 +0200
++++ netperf-2.3/arr_script	2004-07-17 19:57:46.029406272 +0200
+@@ -10,8 +10,8 @@
+   TOLERANCE=15
+   MAX_RETRIES=3
+ 
+-  NETPERF="/usr/local/netperf/netperf"
+-  NETPERF="./netperf"
++# NETPERF="/usr/local/netperf/netperf"
++  NETPERF="/usr/bin/netperf"
+ 
+   NPROC_LIST=""
+   RR_SIZES=""
+--- netperf-2.3/packet_byte_script.orig	2004-06-26 00:09:50.000000000 +0200
++++ netperf-2.3/packet_byte_script	2004-07-17 19:58:04.905536664 +0200
+@@ -22,7 +22,7 @@
+ fi
+ 
+ # where is netperf
+-NETPERF_CMD=${NETPERF_CMD:=/opt/netperf/netperf}
++NETPERF_CMD=${NETPERF_CMD:=/usr/bin/netperf}
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+--- netperf-2.3/snapshot_script.orig	2004-06-26 00:09:50.000000000 +0200
++++ netperf-2.3/snapshot_script	2004-07-17 19:58:36.233774048 +0200
+@@ -37,7 +37,7 @@
+ #
+ # where is netperf installed, there are a few possible places:
+ 
+-NETPERF_CMD=${NETPERF_CMD:=/opt/netperf/netperf}
++NETPERF_CMD=${NETPERF_CMD:=/usr/bin/netperf}
+ 
+ 
+ # there should be no more than two parms passed
+--- netperf-2.3/tcp_range_script.orig	2004-06-26 00:09:50.000000000 +0200
++++ netperf-2.3/tcp_range_script	2004-07-17 20:00:29.887496056 +0200
+@@ -43,8 +43,8 @@
+ # where is netperf, and are there any "constant" options such as 
+ # the netserver port number
+ #NETHOME=/usr/etc/net_perf
+-NETHOME="."
+-NETPERF=$NETHOME/netperf $PORT
++#NETHOME="."
++NETPERF=/usr/bin/netperf $PORT
+ 
+ # How accurate we want the estimate of performance: 
+ #      maximum and minimum test iterations (-i)
+--- netperf-2.3/tcp_rr_script.orig	2004-06-26 00:09:50.000000000 +0200
++++ netperf-2.3/tcp_rr_script	2004-07-17 20:01:26.950821112 +0200
+@@ -25,7 +25,7 @@
+ # where the programs are
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME=.
++NETHOME="/usr/bin"
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+--- netperf-2.3/tcp_stream_script.orig	2004-06-26 00:09:50.000000000 +0200
++++ netperf-2.3/tcp_stream_script	2004-07-17 20:01:43.181353696 +0200
+@@ -24,7 +24,7 @@
+ # where the programs are
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME=.
++NETHOME="/usr/bin"
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+--- netperf-2.3/udp_rr_script.orig	2004-06-26 00:09:50.000000000 +0200
++++ netperf-2.3/udp_rr_script	2004-07-17 19:59:50.935417672 +0200
+@@ -22,7 +22,7 @@
+ 
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME="."
++NETHOME="/usr/bin/netperf"
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+--- netperf-2.3/udp_stream_script.orig	2004-06-26 00:09:50.000000000 +0200
++++ netperf-2.3/udp_stream_script	2004-07-17 19:59:36.725577896 +0200
+@@ -19,7 +19,7 @@
+ 
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME="."
++NETHOME="/usr/bin/netperf"
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
