@@ -6,7 +6,8 @@ Version:	2.3
 Release:	0.1
 License:	Freely Distributable
 Group:		Networking
-Source0:	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/%{name}-%{version}.tar.gz
+#Source0:	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/%{name}-%{version}.tar.gz
+Source0:	netperf-2.3.tar.gz
 # Source0-md5:	df61b8db5e38d58cdf81748635614d33
 Patch0:		%{name}-makefile.patch
 URL:		http://www.netperf.org/
