@@ -68,6 +68,13 @@ install netserver.man		$RPM_BUILD_ROOT%{_mandir}/man1/netserver.1
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%files
+%defattr(644,root,root,755)
+%doc ACKNWLDGMNTS COPYRIGHT README Release_Notes
+%attr(755,root,root) %{_bindir}/netperf
+%attr(755,root,root) %{_bindir}/netserver
+%{_mandir}/man?/*
+
 %files -n netperf-scripts
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/netperf-script_arr
@@ -78,10 +85,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/netperf-script_tcp_range
 %attr(755,root,root) %{_bindir}/netperf-script_tcp_stream
 %attr(755,root,root) %{_bindir}/netperf-script_udp_stream
-
-%files
-%defattr(644,root,root,755)
-%doc ACKNWLDGMNTS COPYRIGHT README Release_Notes
-%attr(755,root,root) %{_bindir}/netperf
-%attr(755,root,root) %{_bindir}/netserver
-%{_mandir}/man?/*
