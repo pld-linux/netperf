@@ -30,15 +30,15 @@ Netperf to narzêdzie do mierzenia szybko¶ci TCP/UDP.
 Ferramenta para medir a velocidade de transferências TCP/UDP.
 
 %package -n netperf-scripts
-Summary:	Scripts for Netperf.
-Summary(pl):	Skrypty dla Netperf-a.
+Summary:	Scripts for Netperf
+Summary(pl):	Skrypty dla Netperfa
 Group:		Networking
 
 %description -n netperf-scripts
 Scripts for Netperf.
 
 %description -n netperf-scripts -l pl
-Skrypty dla Netperf-a.
+Skrypty dla Netperfa.
 
 %prep
 %setup -q
