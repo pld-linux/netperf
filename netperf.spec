@@ -1,10 +1,12 @@
+# TODO:
+# - init for netserver
 Summary:	Performance testing tool for TCP/UDP
 Summary(es):	Mide la Velocidad de la Conecion entre dos maquinas
 Summary(pl):	Narzêdzie do testowania wydajno¶ci dla TCP/UDP
 Summary(pt_BR):	Ferramenta para testes de performance de rede TCP/UDP
 Name:		netperf
 Version:	2.3
-Release:	0.2
+Release:	1
 License:	Freely Distributable
 Group:		Networking
 #Source0:	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/%{name}-%{version}.tar.gz
