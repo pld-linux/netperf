@@ -8,6 +8,7 @@ License:	Freely Distributable
 Group:		Networking
 Source0:	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/%{name}-%{version}.tar.gz
 # Source0-md5:	df61b8db5e38d58cdf81748635614d33
+Patch0:		%{name}-makefile.patch
 URL:		http://www.netperf.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,6 +23,7 @@ El netperf mide la velocidad en que la tarjeta de red responde.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make}
@@ -31,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 install netperf $RPM_BUILD_ROOT%{_bindir}
-install netserv $RPM_BUILD_ROOT%{_bindir}
+install netserver $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -39,5 +41,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ACKNWLDGMNTS COPYRIGHT README Release_Notes
-%attr(755,root,root) %{_bindir}/netpref
-%attr(755,root,root) %{_bindir}/netserv
+%attr(755,root,root) %{_bindir}/netperf
+%attr(755,root,root) %{_bindir}/netserver
