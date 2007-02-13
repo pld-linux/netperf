@@ -1,9 +1,9 @@
 # TODO:
 # - init for netserver
 Summary:	Performance testing tool for TCP/UDP
-Summary(es.UTF-8):   Mide la Velocidad de la Conecion entre dos maquinas
-Summary(pl.UTF-8):   Narzędzie do testowania wydajności dla TCP/UDP
-Summary(pt_BR.UTF-8):   Ferramenta para testes de performance de rede TCP/UDP
+Summary(es.UTF-8):	Mide la Velocidad de la Conecion entre dos maquinas
+Summary(pl.UTF-8):	Narzędzie do testowania wydajności dla TCP/UDP
+Summary(pt_BR.UTF-8):	Ferramenta para testes de performance de rede TCP/UDP
 Name:		netperf
 Version:	2.3
 Release:	3
@@ -31,7 +31,7 @@ Ferramenta para medir a velocidade de transferências TCP/UDP.
 
 %package -n netperf-scripts
 Summary:	Scripts for Netperf
-Summary(pl.UTF-8):   Skrypty dla Netperfa
+Summary(pl.UTF-8):	Skrypty dla Netperfa
 Group:		Networking
 
 %description -n netperf-scripts
