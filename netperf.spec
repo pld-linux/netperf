@@ -60,7 +60,7 @@ for a in doc/examples/*; do
 done
 
 rm -f $RPM_BUILD_ROOT%{_bindir}/*Makefile*
-%{__rm} $RPM_BUILD_ROOT%{_infodir}/dir
+rm -f $RPM_BUILD_ROOT%{_infodir}/dir
 
 %clean
 rm -rf $RPM_BUILD_ROOT
