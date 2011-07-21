@@ -5,12 +5,12 @@ Summary(es.UTF-8):	Mide la Velocidad de la Conecion entre dos maquinas
 Summary(pl.UTF-8):	Narzędzie do testowania wydajności dla TCP/UDP
 Summary(pt_BR.UTF-8):	Ferramenta para testes de performance de rede TCP/UDP
 Name:		netperf
-Version:	2.4.5
+Version:	2.5.0
 Release:	1
 License:	distributable
 Group:		Networking
 Source0:	ftp://ftp.netperf.org/netperf/%{name}-%{version}.tar.bz2
-# Source0-md5:	5cfaae1d024551161b8eafbd48faedf4
+# Source0-md5:	fe23629f061a161b9d52d39b16620318
 Patch1:		%{name}-scripts.patch
 URL:		http://www.netperf.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
