@@ -6,7 +6,7 @@ Summary(pl.UTF-8):	Narzędzie do testowania wydajności dla TCP/UDP
 Summary(pt_BR.UTF-8):	Ferramenta para testes de performance de rede TCP/UDP
 Name:		netperf
 Version:	2.6.0
-Release:	1
+Release:	2
 License:	distributable
 Group:		Networking
 Source0:	ftp://ftp.netperf.org/netperf/%{name}-%{version}.tar.bz2
@@ -64,6 +64,12 @@ rm -f $RPM_BUILD_ROOT%{_infodir}/dir
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/postshell
+-/usr/sbin/fix-info-dir -c %{_infodir}
+
+%postun	-p /sbin/postshell
+-/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files
 %defattr(644,root,root,755)
