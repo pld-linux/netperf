@@ -1,11 +1,13 @@
---- netperf-2.4.5-scripts/doc/examples/arr_script	2011-02-21 14:04:33.210661848 +0200
-+++ netperf-2.4.5-scripts/doc/examples/arr_script	2011-02-21 14:04:33.210661848 +0200
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/arr_script netperf-2.6.0/doc/examples/arr_script
+--- netperf-2.6.0.org/doc/examples/arr_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/arr_script	2026-03-03 00:29:48.651211837 +0100
 @@ -1,3 +1,4 @@
 +#!/bin/sh
  # this is retained mostly for historical purposes and may not be
  # up to date for contemporary netperf versions
  #
-@@ -13,6 +14,5 @@
+@@ -12,8 +13,7 @@ init_parms() {
+   TOLERANCE=15
    MAX_RETRIES=3
  
 -  NETPERF="/usr/local/netperf/netperf"
@@ -13,9 +15,11 @@
 +  NETPERF="/usr/bin/netperf"
  
    NPROC_LIST=""
---- netperf-2.4.5/doc/examples/packet_byte_script	2007-11-09 01:29:45.000000000 +0200
-+++ netperf-2.4.5-scripts/doc/examples/packet_byte_script	2011-02-21 13:32:49.530443373 +0200
-@@ -25,7 +25,7 @@
+   RR_SIZES=""
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/packet_byte_script netperf-2.6.0/doc/examples/packet_byte_script
+--- netperf-2.6.0.org/doc/examples/packet_byte_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/packet_byte_script	2026-03-03 00:29:48.651409176 +0100
+@@ -25,7 +25,7 @@ if [ $# -eq 0 ]; then
  fi
  
  # where is netperf
@@ -24,8 +28,21 @@
  
  
  # at what port will netserver be waiting? If you decide to run
---- netperf-2.4.5/doc/examples/snapshot_script	2007-06-02 01:06:03.000000000 +0300
-+++ netperf-2.4.5-scripts/doc/examples/snapshot_script	2011-02-21 13:32:49.533776462 +0200
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/sctp_stream_script netperf-2.6.0/doc/examples/sctp_stream_script
+--- netperf-2.6.0.org/doc/examples/sctp_stream_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/sctp_stream_script	2026-03-03 00:29:48.652033668 +0100
+@@ -24,7 +24,7 @@ fi
+ # where the programs are
+ #NETHOME=/usr/local/netperf
+ #NETHOME="/opt/netperf"
+-NETHOME=.
++NETHOME=/usr/bin
+ 
+ # at what port will netserver be waiting? If you decide to run
+ # netserver at a differnet port than the default of 12865, then set
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/snapshot_script netperf-2.6.0/doc/examples/snapshot_script
+--- netperf-2.6.0.org/doc/examples/snapshot_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/snapshot_script	2026-03-03 00:29:48.651506380 +0100
 @@ -37,7 +37,7 @@
  #
  # where is netperf installed, there are a few possible places:
@@ -35,9 +52,10 @@
  
  
  # there should be no more than two parms passed
---- netperf-2.4.5-scripts/doc/examples/tcp_range_script	2011-02-21 14:05:38.182552753 +0200
-+++ netperf-2.4.5-scripts/doc/examples/tcp_range_script	2011-02-21 14:05:38.182552753 +0200
-@@ -42,9 +42,7 @@
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/tcp_range_script netperf-2.6.0/doc/examples/tcp_range_script
+--- netperf-2.6.0.org/doc/examples/tcp_range_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/tcp_range_script	2026-03-03 00:29:48.651591809 +0100
+@@ -42,9 +42,7 @@ PORT=""
  
  # where is netperf, and are there any "constant" options such as 
  # the netserver port number
@@ -48,9 +66,10 @@
  
  # How accurate we want the estimate of performance: 
  #      maximum and minimum test iterations (-i)
---- netperf-2.4.5/doc/examples/tcp_rr_script	2007-06-02 01:06:03.000000000 +0300
-+++ netperf-2.4.5-scripts/doc/examples/tcp_rr_script	2011-02-21 13:32:49.533776462 +0200
-@@ -25,7 +25,7 @@
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/tcp_rr_script netperf-2.6.0/doc/examples/tcp_rr_script
+--- netperf-2.6.0.org/doc/examples/tcp_rr_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/tcp_rr_script	2026-03-03 00:29:48.651681802 +0100
+@@ -25,7 +25,7 @@ fi
  # where the programs are
  #NETHOME=/usr/local/netperf
  #NETHOME="/opt/netperf"
@@ -59,9 +78,10 @@
  
  # at what port will netserver be waiting? If you decide to run
  # netserver at a differnet port than the default of 12865, then set
---- netperf-2.4.5/doc/examples/tcp_stream_script	2007-06-02 01:06:03.000000000 +0300
-+++ netperf-2.4.5-scripts/doc/examples/tcp_stream_script	2011-02-21 13:32:49.533776462 +0200
-@@ -24,7 +24,7 @@
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/tcp_stream_script netperf-2.6.0/doc/examples/tcp_stream_script
+--- netperf-2.6.0.org/doc/examples/tcp_stream_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/tcp_stream_script	2026-03-03 00:29:48.651758775 +0100
+@@ -24,7 +24,7 @@ fi
  # where the programs are
  #NETHOME=/usr/local/netperf
  #NETHOME="/opt/netperf"
@@ -69,10 +89,11 @@
 +NETHOME="/usr/bin"
  
  # at what port will netserver be waiting? If you decide to run
- # netserver at a differnet port than the default of 12865, then set
---- netperf-2.4.5/doc/examples/udp_rr_script	2007-06-02 01:06:03.000000000 +0300
-+++ netperf-2.4.5-scripts/doc/examples/udp_rr_script	2011-02-21 13:32:49.537109551 +0200
-@@ -22,7 +22,7 @@
+ # netserver at a different port than the default of 12865, then set
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/udp_rr_script netperf-2.6.0/doc/examples/udp_rr_script
+--- netperf-2.6.0.org/doc/examples/udp_rr_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/udp_rr_script	2026-03-03 00:29:48.651875649 +0100
+@@ -22,7 +22,7 @@ fi
  
  #NETHOME=/usr/local/netperf
  #NETHOME="/opt/netperf"
@@ -81,25 +102,15 @@
  
  # at what port will netserver be waiting? If you decide to run
  # netserver at a differnet port than the default of 12865, then set
---- netperf-2.4.5/doc/examples/udp_stream_script	2007-06-02 01:06:03.000000000 +0300
-+++ netperf-2.4.5-scripts/doc/examples/udp_stream_script	2011-02-21 13:32:49.537109551 +0200
-@@ -19,7 +19,7 @@
+diff -urNp -x '*.orig' netperf-2.6.0.org/doc/examples/udp_stream_script netperf-2.6.0/doc/examples/udp_stream_script
+--- netperf-2.6.0.org/doc/examples/udp_stream_script	2011-02-10 18:04:20.000000000 +0100
++++ netperf-2.6.0/doc/examples/udp_stream_script	2026-03-03 00:29:48.651952075 +0100
+@@ -19,7 +19,7 @@ fi
  
  #NETHOME=/usr/local/netperf
  #NETHOME="/opt/netperf"
 -NETHOME="."
 +NETHOME="/usr/bin"
- 
- # at what port will netserver be waiting? If you decide to run
- # netserver at a differnet port than the default of 12865, then set
---- netperf-2.4.5//doc/examples/sctp_stream_script	2007-06-02 01:06:03.000000000 +0300
-+++ netperf-2.4.5-scripts/doc/examples/sctp_stream_script	2011-02-21 14:04:53.472505842 +0200
-@@ -24,7 +24,7 @@
- # where the programs are
- #NETHOME=/usr/local/netperf
- #NETHOME="/opt/netperf"
--NETHOME=.
-+NETHOME=/usr/bin
  
  # at what port will netserver be waiting? If you decide to run
  # netserver at a differnet port than the default of 12865, then set
